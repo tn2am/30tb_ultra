@@ -1,0 +1,173 @@
+/* --- Cài đặt chung --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    height: 100vh;
+    background: url('https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77701907122.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #E8E8E8;
+}
+
+/* --- Container chính với hiệu ứng Glassmorphism --- */
+.glass-container {
+    background: rgba(35, 35, 35, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border-radius: 15px;
+    padding: 30px 40px;
+    width: 100%;
+    max-width: 700px;
+}
+
+/* --- Phần đầu: Tiêu đề, Chào hỏi, Đồng hồ --- */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.title-gradient {
+    background: -webkit-linear-gradient(45deg, #89f7fe, #66a6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+header h1 {
+    font-size: 28px;
+    margin-bottom: 4px;
+}
+header h2 {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(232, 232, 232, 0.8);
+    margin-bottom: 10px;
+}
+header #clock {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(232, 232, 232, 0.7);
+}
+
+/* --- Khu vực nhập liệu --- */
+.input-group {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+textarea {
+    width: 100%;
+    min-height: 110px;
+    resize: vertical;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #fff;
+    font-family: "SF Mono", "Fira Code", "Courier New", monospace;
+    font-size: 14px;
+}
+textarea:focus {
+    outline: none;
+    border-color: rgba(102, 166, 255, 0.6);
+}
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* --- Lớp nút bấm chung (Action Button) --- */
+.action-button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.1s ease, background-color 0.2s ease;
+}
+.action-button:hover {
+    background-color: #f0f0f0;
+}
+.action-button:active {
+    transform: scale(0.98);
+}
+
+/* --- Khu vực kết quả mới --- */
+.result-area {
+    margin-top: 20px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.result-area.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* --- Cập nhật Style cho thông tin tác giả --- */
+.creator-info {
+    margin-top: 30px; /* Tăng khoảng cách */
+    text-align: center;
+    font-size: 14px; /* Tăng kích thước chữ */
+    color: rgba(255, 255, 255, 0.75); /* Làm chữ sáng hơn */
+}
+
+/* Thêm style cho các dòng bên trong footer */
+.creator-info p {
+    margin-bottom: 5px; /* Thêm khoảng cách nhỏ giữa 2 dòng */
+}
+
+/* Style cho các đường link mạng xã hội */
+.creator-info a {
+    color: rgba(255, 255, 255, 0.9); /* Làm link nổi bật hơn */
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.creator-info a:hover {
+    color: #fff; /* Sáng lên khi di chuột qua */
+    text-decoration: underline;
+}
+/* ================================================== */
+
+/* --- Thông báo Toast (Không thay đổi) --- */
+#toast {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 25px;
+    background: rgba(20, 20, 20, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 500;
+    transition: bottom 0.5s ease-in-out;
+    z-index: 100;
+}
+#toast.show {
+    bottom: 30px;
+}
