@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool Chuyển Đổi Token</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <main class="glass-container">
+        <header>
+            <h1 id="greeting" class="title-gradient">Chào bạn</h1>
+            <h2>Tool chỉnh token 30TB Ultra</h2>
+            <p id="clock">Đang tải giờ...</p>
+        </header>
+
+        <div class="input-group">
+            <label for="tokenSource">Dán Token Nguồn (ví dụ: 2TB Hạ Cấp)</label>
+            <textarea id="tokenSource" placeholder="https://tokenized.play.google.com/..."></textarea>
+        </div>
+
+        <div class="input-group">
+            <label for="tokenTarget">Dán Token Đích (ví dụ: 30TB Ultra)</label>
+            <textarea id="tokenTarget" placeholder="https://tokenized.play.google.com/..."></textarea>
+        </div>
+
+        <button id="convertButton" class="action-button">
+            <span class="button-text">Chuyển Đổi</span>
+        </button>
+
+        <div id="resultArea" class="result-area hidden">
+            <a href="#" id="openLinkButton" class="action-button" target="_blank" rel="noopener noreferrer">
+                Mở Liên Kết
+            </a>
+        </div>
+
+    </main>
+
+    <footer class="creator-info">
+        <p>Một sản phẩm từ <strong>Thành Nam</strong></p>
+        <p class="social-links">
+            <a href="https://www.facebook.com/tn2am" target="_blank">Facebook</a> •
+            <a href="https://www.instagram.com/liweusol/" target="_blank">Instagram</a> •
+            <a href="https://zalo.me/0374276659" target="_blank">Zalo</a>
+        </p>
+    </footer>
+    <div id="toast"></div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
